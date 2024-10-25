@@ -104,18 +104,34 @@ const ShopContextProvider = (props) => {
     });
   };
 
-  const getTotalCartAmount = () => {
-    let totalAmount = 0;
+  const getTotalCartItems = () => {
+    let totalItem = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
-        let itemInfo = product.find((product) => product._id === Number(item));
-        totalAmount += itemInfo.ProductPrice * cartItems[item];
+        totalItem += cartItems[item];
       }
-      return totalAmount;
     }
+    return totalItem;
   };
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        const itemInfo = product.find((onep) => onep._id === item);
+        if (itemInfo) {
+          totalAmount +=
+            parseFloat(itemInfo.ProductPrice || 0) * (cartItems[item] || 0);
+        }
+      }
+    }
+    return totalAmount; // Moved outside of the loop
+  };
+
   const contextValue = {
     getTotalCartAmount,
+    getTotalCartItems,
+
     product,
     cartItems,
     addToCart,

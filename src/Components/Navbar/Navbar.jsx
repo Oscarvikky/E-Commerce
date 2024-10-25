@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
+import { ShopContext } from "../../Context/ShopContext";
+import mylogo from "../Assets/mylogo.png";
 
 const Navbar = () => {
   const [menu, setmenu] = useState("shop");
+
+  const { getTotalCartItems } = useContext(ShopContext);
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src="" alt="" />
-        <p>SHOPPER</p>
+        <img src={mylogo} alt="" />
+        <p>OSCARVIKKY</p>
       </div>
       <ul className="nav-menu">
         <li
@@ -62,7 +66,7 @@ const Navbar = () => {
             <TiShoppingCart />
           </span>
         </Link>
-        <div className="nav-cart-count">0</div>
+        <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>
   );

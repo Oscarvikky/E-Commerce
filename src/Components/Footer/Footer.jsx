@@ -1,12 +1,16 @@
 import React from "react";
 import "./Footer.css";
+import { FaInstagram } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+import mylogo from "../Assets/mylogo.png";
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src="" alt="" />
-        <p>SHOPPER</p>
+        <img src={mylogo} alt="" />
+        <p>OSCARVIKKY</p>
       </div>
       <ul className="footer-links">
         <li>Company</li>
@@ -17,13 +21,19 @@ const Footer = () => {
       </ul>
       <div className="footer-social-icon">
         <div className="footer-icon-container">
-          <img src="" alt="" />
+          <span className="whatss">
+            <FaInstagram />
+          </span>
         </div>
         <div className="footer-icon-container">
-          <img src="" alt="" />
+          <span>
+            <FaPinterest />
+          </span>
         </div>
         <div className="footer-icon-container">
-          <img src="" alt="" />
+          <span className="whats">
+            <FaWhatsapp />
+          </span>
         </div>
       </div>
 

@@ -106,7 +106,10 @@ const CartItems = () => {
                   <span>{cartItems[e._id]}</span>
                   <button onClick={() => removefromcart(e._id)}>-</button>
                 </div>
-                <p>${parseFloat(e.ProductPrice) * (cartItems[e._id] ?? 0)}</p>
+                <p>
+                  ${parseFloat(e.ProductPrice || 0) * (cartItems[e._id] || 0)}
+                </p>
+
                 <button className="del" onClick={() => removefromcart(e._id)}>
                   x
                 </button>
