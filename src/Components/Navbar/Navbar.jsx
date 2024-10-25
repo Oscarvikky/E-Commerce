@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { TiShoppingCart } from "react-icons/ti";
 
 const Navbar = () => {
   const [menu, setmenu] = useState("shop");
@@ -57,7 +58,9 @@ const Navbar = () => {
           <button>Login</button>
         </Link>
         <Link style={{ textDecoration: "none" }} to="/Cart">
-          <img src="" alt="" />
+          <span className="cart">
+            <TiShoppingCart />
+          </span>
         </Link>
         <div className="nav-cart-count">0</div>
       </div>
