@@ -1,21 +1,30 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
 import { ShopContext } from "../../Context/ShopContext";
 import mylogo from "../Assets/mylogo.png";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Navbar = () => {
   const [menu, setmenu] = useState("shop");
-
   const { getTotalCartItems } = useContext(ShopContext);
+  const menuRef = useRef();
+
+  const dropdown_toggle = (e) => {
+    menuRef.current.classList.toggle("nav-menu-visible");
+    e.currentTarget.classList.toggle("open");
+  };
   return (
     <div className="navbar">
       <div className="nav-logo">
         <img src={mylogo} alt="" />
         <p>OSCARVIKKY</p>
       </div>
-      <ul className="nav-menu">
+      <span className="nav-dropdown" onClick={dropdown_toggle}>
+        <IoIosArrowDropdown />
+      </span>
+      <ul ref={menuRef} className="nav-menu">
         <li
           onClick={() => {
             setmenu("shop");

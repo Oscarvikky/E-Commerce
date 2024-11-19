@@ -1,37 +1,53 @@
 .newcollections {
-  display: flex;
+  /* display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 10px;
   margin-bottom: 100px;
-  height: 70vh;
+  height: 70vh; */
 }
 .newcollections h1 {
   color: black;
   font-size: 30px;
   font-family: 500;
+  text-align: center;
 }
 .newcollections hr {
   width: 200px;
   height: 4px;
   border-radius: 10px;
   background: #252525;
+  margin: auto;
+  margin-bottom: 30px;
 }
 .newcollections-item {
   margin-top: 50px;
   display: flex;
   gap: 30px;
+  background-color: aqua;
 }
 .collections {
   /* display: grid; */
   /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* gap: 30px; */
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* margin: auto; */
+  /* width: 90%; */
+
+  margin-top: 70px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 90%;
+  width: 80%;
+  /* margin-top: 20px; */
+  margin-bottom: 100px;
+  background-color: blanchedalmond;
 }

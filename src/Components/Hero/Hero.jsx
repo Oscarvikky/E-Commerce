@@ -1,5 +1,7 @@
 import React from "react";
 import "./Hero.css";
+import { FaArrowRightLong } from "react-icons/fa6";
+import hero from "../Assets/hero.jpg";
 
 const Hero = () => {
   return (
@@ -16,11 +18,13 @@ const Hero = () => {
         </div>
         <div className="hero-latest-btn">
           <div>latest collection</div>
-          <img src="" alt="" />
+          <span>
+            <FaArrowRightLong />
+          </span>
         </div>
       </div>
       <div className="hero-right">
-        <img src="" alt="" />
+        <img src={hero} alt="" />
       </div>
     </div>
   );

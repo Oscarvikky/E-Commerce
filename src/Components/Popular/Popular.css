@@ -1,11 +1,12 @@
 .popular {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  gap: 10px;
-  height: 70vh;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* text-align: center; */
+  /* justify-content: center; */
+  /* gap: 20px; */
+  /* flex-wrap: wrap; */
+  /* height: 70vh; */
   /* width: 60%; */
   /* margin: auto; */
 }
@@ -20,14 +21,96 @@
   height: 4px;
   border-radius: 10px;
   background: #252525;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
 }
 .popular-item {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 90%;
+  width: 80%;
+  margin-top: 20px;
   /* gap: 10px; */
   /* width: 90%; */
+  /* background-color: blue; */
+}
+
+@media (max-width: 1280px) {
+  .popular {
+    /* height: 100vh; */
+    /* background-color: aqua; */
+  }
+  .popular h1 {
+    font-size: 35px;
+    /* color: #b9a4a4; */
+  }
+  .popular hr {
+    width: 150px;
+    height: 3px;
+  }
+  .popular-item {
+    /* background-color: blue; */
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .popular {
+    /* height: 100vh; */
+    /* background-color: darkcyan; */
+  }
+  .popular h1 {
+    font-size: 25px;
+    /* color: #b9a4a4; */
+  }
+  .popular hr {
+    width: 150px;
+    height: 3px;
+  }
+  .popular-item {
+    /* background-color: gray; */
+    width: 80%;
+    gap: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .popular {
+    /* height: 100vh; */
+    /* background-color: rgb(48, 50, 50); */
+  }
+  .popular h1 {
+    font-size: 25px;
+    /* color: #b9a4a4; */
+  }
+  .popular hr {
+    width: 150px;
+    height: 2px;
+  }
+  .popular-item {
+    /* background-color: rgb(240, 68, 68); */
+    width: 90%;
+    /* gap: 10px; */
+  }
+}
+@media (max-width: 500px) {
+  .popular {
+    /* height: 100vh; */
+    /* background-color: rgb(133, 217, 217); */
+  }
+  .popular h1 {
+    font-size: 20px;
+    /* color: #b9a4a4; */
+  }
+  .popular hr {
+    width: 150px;
+    /* height: 3px; */
+  }
+  .popular-item {
+    /* background-color: rgb(38, 15, 15); */
+    width: 100%;
+    gap: 10px;
+  }
 }
