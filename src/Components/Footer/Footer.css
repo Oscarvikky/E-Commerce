@@ -65,3 +65,30 @@
   height: 3px;
   background: #c7c7c7;
 }
+
+@media (max-width: 800px) {
+  .footer {
+    gap: 15px;
+  }
+  .footer-logo {
+    gap: 5px;
+    align-items: end;
+  }
+  .footer-logo img {
+    width: 40px;
+  }
+  .footer-logo p {
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .footer-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+  .footer-social-icon span {
+    font-size: 25px;
+  }
+  .footer-copyright {
+    font-size: 14px;
+  }
+}

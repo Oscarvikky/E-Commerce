@@ -23,7 +23,7 @@
   margin: auto;
   margin-bottom: 30px;
 }
-.newcollections-item {
+.collections {
   margin-top: 50px;
   display: flex;
   gap: 30px;
@@ -50,4 +50,80 @@
   /* margin-top: 20px; */
   margin-bottom: 100px;
   background-color: blanchedalmond;
+}
+
+@media (max-width: 1280px) {
+  .newcollections {
+    /* height: 100vh; */
+    /* background-color: aqua; */
+  }
+  .newcollections h1 {
+    font-size: 35px;
+    /* color: #b9a4a4; */
+  }
+  .newcollections hr {
+    width: 150px;
+    height: 3px;
+  }
+  .collections {
+    /* background-color: blue; */
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .newcollections {
+    /* height: 100vh; */
+    /* background-color: darkcyan; */
+  }
+  .newcollections h1 {
+    font-size: 25px;
+    /* color: #b9a4a4; */
+  }
+  .newcollections hr {
+    width: 150px;
+    height: 3px;
+  }
+  .collections {
+    /* background-color: gray; */
+    width: 80%;
+    gap: 16px;
+  }
+}
+@media (max-width: 800px) {
+  .newcollections {
+    /* height: 100vh; */
+    /* background-color: rgb(48, 50, 50); */
+  }
+  .newcollections h1 {
+    font-size: 25px;
+    /* color: #b9a4a4; */
+  }
+  .newcollections hr {
+    width: 150px;
+    height: 2px;
+  }
+  .collections {
+    /* background-color: rgb(240, 68, 68); */
+    width: 90%;
+    /* gap: 10px; */
+  }
+}
+@media (max-width: 500px) {
+  .newcollections {
+    /* height: 100vh; */
+    /* background-color: rgb(133, 217, 217); */
+  }
+  .newcollections h1 {
+    font-size: 20px;
+    /* color: #b9a4a4; */
+  }
+  .newcollections hr {
+    width: 150px;
+    /* height: 3px; */
+  }
+  .collections {
+    /* background-color: rgb(38, 15, 15); */
+    width: 100%;
+    gap: 10px;
+  }
 }

@@ -23,7 +23,7 @@ const Productdisplay = ({ oneproduct }) => {
         </div>
         <div className="productdisplay-img">
           <img
-            className="productdisplay-img"
+            className="productdisplay-main-img"
             src={oneproduct.ProductImage}
             alt=""
           />
