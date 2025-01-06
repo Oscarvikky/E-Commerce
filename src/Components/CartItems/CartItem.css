@@ -144,13 +144,33 @@
   .cartitems-format-main {
     /* display: none; */
     grid-template-columns: 0.5fr 3fr 1fr 3fr 0.5fr 0.5fr;
-    gap: 8px;
+    /* background-color: red; */
+
+    gap: 12px;
     align-items: center;
+  }
+  .cartitems {
+    /* background-color: aqua; */
   }
   .tr {
     display: none;
   }
   .cartitems-format {
     display: grid;
+  }
+  .cartitems-actions {
+    display: none;
+  }
+  .cartitems-promobox button {
+    width: 120px;
+    margin-left: -125px;
+  }
+  .cartitems-promobox {
+    width: auto;
+    /* background-color: black; */
+    max-width: 250px;
+  }
+  .cartitems-promobox input {
+    width: 100%;
   }
 }

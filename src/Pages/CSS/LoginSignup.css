@@ -128,4 +128,7 @@
   .loginsignup-agree {
     font-size: 9px;
   }
+  .loginsignup {
+    height: 50vh;
+  }
 }
