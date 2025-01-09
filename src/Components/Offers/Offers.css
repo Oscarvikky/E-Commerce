@@ -1,5 +1,5 @@
 .offers {
-  width: 60%;
+  width: 70%;
   height: 50vh;
   display: flex;
   margin: auto;
@@ -16,7 +16,7 @@
 }
 .offers-left h1 {
   color: #171717;
-  font-size: 50px;
+  font-size: 40px;
   font-family: 600;
 }
 
@@ -96,7 +96,7 @@
 @media (max-width: 500px) {
   .offers {
     padding: 0 40px;
-    height: 25vh;
+    height: 14vh;
     margin-bottom: 30px;
   }
   .offers-left h1 {

@@ -18,8 +18,11 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={mylogo} alt="" />
-        <p>OSCARVIKKY</p>
+        <Link className="nav-logo" to="/">
+          {" "}
+          <img src={mylogo} alt="" />
+          <span>OSCARVIKKY</span>
+        </Link>
       </div>
       <span className="nav-dropdown" onClick={dropdown_toggle}>
         <IoIosArrowDropdown />

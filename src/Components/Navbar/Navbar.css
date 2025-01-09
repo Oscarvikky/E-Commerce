@@ -9,13 +9,15 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  /* background-color: #ff4141; */
+  /* width: 50%; */
 }
 .nav-logo img {
-  width: 50px;
+  width: 40px;
 }
-.nav-logo p {
+.nav-logo span {
   color: #171717;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
 }
 .nav-menu {

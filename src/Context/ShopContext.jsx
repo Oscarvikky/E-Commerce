@@ -89,6 +89,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev, [item_Id]: (prev[item_Id] || 0) + 1 };
       localStorage.setItem("cartItems", JSON.stringify(updatedCart)); // Persist to localStorage
+      alert("successfully add to cart");
       return updatedCart;
     });
   };
