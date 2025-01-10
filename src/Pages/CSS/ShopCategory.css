@@ -125,9 +125,10 @@
 }
 @media (max-width: 500px) {
   .shopcategory-products {
-    grid-template-columns: 1fr 1fr;
-    /* width: 80%; */
-    /* margin: auto; */
+    grid-template-columns: 3fr 2fr;
+    /* background-color: red; */
+    width: 100%;
+    margin: auto;
   }
   .shopcat {
     font-size: 12px;
@@ -142,5 +143,6 @@
     padding: 2px 5px;
     font-size: 8px;
     width: 70px;
+    display: none;
   }
 }

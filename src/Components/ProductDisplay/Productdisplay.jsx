@@ -32,7 +32,7 @@ const Productdisplay = ({ oneproduct }) => {
 
       <div className="productdisplay-right">
         <h1>{oneproduct.ProductName}</h1>
-        <div className="productdisplay-rigt-star">
+        <div className="productdisplay-right-star">
           <img className="yuy" src={star} alt="" />
           <img className="yuy" src={star} alt="" />
           <img className="yuy" src={star} alt="" />
