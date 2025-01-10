@@ -196,8 +196,8 @@ const Hero = () => {
           Fresh Finds for All to Enjoy!
         </h3>
         <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
-          <span className="text-indigo-500"> @NOLA'S</span> store we make you
-          look beautiful without breaking banks
+          <span className="text-indigo-500"> @NOLA'S</span> store, we make you
+          look beautiful without breaking bank
         </p>
         <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
           Latest collections
@@ -228,67 +228,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://source.boomplaymusic.com/buzzgroup1/M00/40/80/rBEevGMRFCuANuiIAAK5BpdwG5Q648.jpg",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzAQeKHpVBydgpk681XqxTrDUjJXIseTiTAvQFoozS_CTPKo6tzLi_pE4mIjvLIg7Y3JZJSRKzZtF4Vh9UBdoD4cZ6F1KaAyOc65Ppn1ZOHUhTkbKDUEhJjHiJqw9Jjes0boV6zmhA9YiEEnfbPFVeOsSjCNMXPqi7oi30QosTp52r3ETpMOACxUppQzeW/s16000-rw/avant-garde%20paper%20fashion%20by%20Mandy%20Duncan%20of%20Curl%20Paper%20Couture,%20as%20seen%20on%20allthingspaper.net.jpg",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://www.shutterstock.com/shutterstock/photos/1854315346/display_1500/stock-photo-portrait-of-an-african-american-girl-in-neon-light-dressed-in-a-sequin-suit-and-posing-in-1854315346.jpg",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://i.insider.com/659b3c9bec62ab5daf815fda?width=800&format=jpeg&auto=webp",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+    src: "https://cdn-kdcfl.nitrocdn.com/QrdYURphyxnwJnTyRvoUEFhezMXyKSqk/assets/images/optimized/rev-c0f9108/www.themodestman.com/wp-content/uploads/2022/09/Old-Man-Style.jpg",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://hips.hearstapps.com/hmg-prod/images/fashion-ig-captions-66bf6c15c8bd1.png?crop=0.5xw:1xh;center,top&resize=1200:*",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUlM-uH96nA0HeG7KhDxHJKHG1y_hz2wVNdg&s",
   },
   {
     id: 8,
-    src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://media.boohoo.com/i/boohoo/hzz16394_dark%20red_xl?w=900&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://glaminati.com/wp-content/uploads/2022/03/sexy-club-outfits-silver-dress-long-sleeve-cuts-cute-look.jpg",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://i0.wp.com/www.weddingforward.com/wp-content/uploads/2023/08/beach-wedding-guest-dresses-simple-long-satin-with-spaghetti-straps-sexy-alamourthelabel.jpg?fit=1080%2C1350&quality=70&ssl=1",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+    src: "https://www.afewwoodmen.com/cdn/shop/articles/Featured_img_1200x1200.png?v=1633349971",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+    src: "https://i.pinimg.com/originals/af/42/d6/af42d6b0d0faac5d1acfe058ad216c65.jpg",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1560089000-7433a4ebbd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh8v1S8_fxCOxIdIiKIa_ZlGvhGcMGX0NlAg&s",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+    src: "https://i.pinimg.com/236x/f2/07/0e/f2070eae2fba161d9fcd98dae1567a1c.jpg",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1606244864456-8bee63fce472?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+    src: "https://i.pinimg.com/originals/35/fb/ae/35fbae8072afecafe982e4cf889c6763.jpg",
   },
   {
     id: 16,
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+    src: "https://i.ytimg.com/vi/wTClY2k2W9M/maxresdefault.jpg",
   },
 ];
 
