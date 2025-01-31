@@ -54,6 +54,7 @@
 .loginsignup-login span {
   color: #ff4141;
   font-weight: 800;
+  cursor: pointer;
 }
 .loginsignup-agree {
   display: flex;
@@ -113,6 +114,8 @@
   .loginsignup-container button {
     height: 40px;
     font-size: 12px;
+
+    margin-left: -4px;
   }
 }
 @media (max-width: 500px) {
