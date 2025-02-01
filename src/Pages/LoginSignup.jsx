@@ -3,6 +3,100 @@ import "./CSS/LoginSignup.css";
 
 const LoginSignup = () => {
   const [state, setstate] = useState("login");
+  const [formData, setformData] = useState({
+    FullName: "",
+    Email: "",
+    Password: "",
+  });
+
+  const changeHandler = (e) => {
+    setformData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const login = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/Api/Users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const responsedata = await response.json();
+      if (responsedata.success) {
+        console.log("response", responsedata);
+
+        window.location.replace("/");
+      } else {
+        alert(responsedata.error);
+      }
+    } catch (error) {
+      console.error("Login failed", error);
+      alert("An error occurred during login.");
+    }
+  };
+  // const login = async () => {
+  //   console.log("login happen", formData);
+  //   let responsedata;
+  //   await fetch("http://localhost:4000/Api/Users/login", {
+  //     method: "POST",
+  //     headers: {
+  //       Accept: "application/form-data",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formData),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => (responsedata = data));
+  //   if (responsedata.success) {
+  //     // localStorage.setItem("auth-token", responsedata.token);
+  //     window.location.replace("/");
+  //   } else {
+  //     alert(responsedata.error);
+  //   }
+  // };
+
+  // const signup = async () => {
+  //   console.log("singup happen", formData);
+  //   let responsedata;
+  //   await fetch("http://localhost:4000/Api/Users/sign-up", {
+  //     method: "POST",
+  //     headers: {
+  //       Accept: "application/form-data",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formData),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => (responsedata = data));
+  //   if (responsedata.success) {
+  //     alert('successs')
+  //     // localStorage.setItem("auth-token", responsedata.token);
+  //     window.location.replace("/");
+  //   } else {
+  //     alert(responsedata.error);
+  //   }
+  // };
+
+  const signup = async () => {
+    try {
+      const response = await fetch("http://localhost:4000/Api/Users/sign-up", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const responsedata = await response.json();
+      if (responsedata.success) {
+        window.location.replace("/");
+      } else {
+        alert(responsedata.error);
+      }
+    } catch (error) {
+      console.error("signup failed", error);
+      alert("An error occurred during signup.");
+    }
+  };
 
   return (
     <div className="loginsignup">
@@ -10,15 +104,35 @@ const LoginSignup = () => {
         <h1>{state}</h1>
         <div className="loginsignup-fields">
           {state === "signup" ? (
-            <input type="text" placeholder="Name" />
+            <input
+              name="FullName"
+              value={formData.FullName}
+              type="text"
+              placeholder="FullName"
+              onChange={changeHandler}
+            />
           ) : (
             <></>
           )}
 
-          <input type="text" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+          <input
+            name="Email"
+            value={formData.Email}
+            onChange={changeHandler}
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            name="Password"
+            value={formData.Password}
+            onChange={changeHandler}
+            type="password"
+            placeholder="Password"
+          />
         </div>
-        <button>continue</button>
+        <button onClick={() => (state === "login" ? login() : signup())}>
+          continue
+        </button>
         {state === "signup" ? (
           <p className="loginsignup-login">
             Already have and account?{" "}
