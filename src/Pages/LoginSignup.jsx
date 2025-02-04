@@ -24,6 +24,7 @@ const LoginSignup = () => {
       const responsedata = await response.json();
       if (responsedata.success) {
         console.log("response", responsedata);
+        localStorage.setItem("token", responsedata.token);
 
         window.location.replace("/");
       } else {
@@ -88,9 +89,11 @@ const LoginSignup = () => {
       });
       const responsedata = await response.json();
       if (responsedata.success) {
+        alert(responsedata.message);
+        localStorage.setItem("token", responsedata.token);
         window.location.replace("/");
       } else {
-        alert(responsedata.error);
+        alert("error signing up");
       }
     } catch (error) {
       console.error("signup failed", error);

@@ -27,7 +27,7 @@
   margin-top: 50px;
   display: flex;
   gap: 30px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .collections {
   /* display: grid; */
@@ -49,7 +49,7 @@
   width: 80%;
   /* margin-top: 20px; */
   margin-bottom: 100px;
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
 }
 
 @media (max-width: 1280px) {

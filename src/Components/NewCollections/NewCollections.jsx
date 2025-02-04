@@ -7,11 +7,16 @@ const NewCollections = () => {
   const [product, setproduct] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/Api/Products/fetchProduct").then((res) => {
-      const fetchdata = res.data.product;
-      setproduct(fetchdata);
-      console.log(product);
-    });
+    axios
+      .get("http://localhost:4000/Api/Products/fetchProduct")
+      .then((res) => {
+        const fetchdata = res.data.product || [];
+        setproduct(fetchdata);
+        console.log(product);
+      })
+      .catch((err) => {
+        console.error("error fecthing new collections:", err);
+      });
   }, []);
 
   return (
