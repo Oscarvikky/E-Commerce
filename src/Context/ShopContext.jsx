@@ -89,6 +89,19 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => {
       const updatedCart = { ...prev, [item_Id]: (prev[item_Id] || 0) + 1 };
       localStorage.setItem("cartItems", JSON.stringify(updatedCart)); // Persist to localStorage
+      localStorage.getItem("token");
+      axios("http//localhost:4000.cart", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          token: `${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ item_Id: item_Id }),
+      }).then((res) => {
+        setCartItems = res.data;
+      });
+
       alert("successfully add to cart");
       return updatedCart;
     });
