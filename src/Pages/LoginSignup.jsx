@@ -22,9 +22,12 @@ const LoginSignup = () => {
         body: JSON.stringify(formData),
       });
       const responsedata = await response.json();
-      if (responsedata.success) {
+      console.log("rawdata", responsedata);
+
+      if ((responsedata.status = "success")) {
         console.log("response", responsedata);
-        localStorage.setItem("token", responsedata.token);
+        alert(responsedata.message);
+        localStorage.setItem("Token", responsedata.generatetoken);
 
         window.location.replace("/");
       } else {
@@ -88,9 +91,11 @@ const LoginSignup = () => {
         body: JSON.stringify(formData),
       });
       const responsedata = await response.json();
+      console.log(responsedata);
+
       if (responsedata.success) {
         alert(responsedata.message);
-        localStorage.setItem("token", responsedata.token);
+        localStorage.setItem("Token", responsedata.generatetoken);
         window.location.replace("/");
       } else {
         alert("error signing up");

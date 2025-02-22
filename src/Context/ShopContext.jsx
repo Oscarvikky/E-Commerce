@@ -85,26 +85,73 @@ const ShopContextProvider = (props) => {
     }
   }, [product]);
 
-  const addToCart = (item_Id) => {
-    setCartItems((prev) => {
-      const updatedCart = { ...prev, [item_Id]: (prev[item_Id] || 0) + 1 };
-      localStorage.setItem("cartItems", JSON.stringify(updatedCart)); // Persist to localStorage
-      localStorage.getItem("token");
-      axios("http//localhost:4000.cart", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          token: `${localStorage.getItem("token")}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ item_Id: item_Id }),
-      }).then((res) => {
-        setCartItems = res.data;
-      });
+  // const addToCart = (itemId) => {
+  //   setCartItems((prev) => {
+  //     const updatedCart = { ...prev, [itemId]: (prev[itemId] || 0) + 1 };
+  //     localStorage.setItem("cartItems", JSON.stringify(updatedCart)); // Persist to localStorage
+  //     let Token = localStorage.getItem("Token");
+  //     console.log("Tokenffff", Token);
+  //     if (Token) {
+  //       axios
+  //         .post(
+  //           "http://localhost:4000/Api/Users/addtocart",
+  //           { itemId },
+  //           {
+  //             headers: {
+  //               Accept: "application/json",
+  //               Authorization: `Bearer ${Token}`,
+  //               "Content-Type": "application/json",
+  //             },
+  //           }
+  //         )
+  //         .then((res) => {
+  //           console.log("ese", res);
 
-      alert("successfully add to cart");
-      return updatedCart;
-    });
+  //           // setCartItems(res.data.cart);
+  //         });
+
+  //       alert("successfully add to cart");
+  //       return updatedCart;
+  //     }
+  //   });
+  // };
+
+  const addToCart = (itemId) => {
+    let Token = localStorage.getItem("Token") || localStorage.getItem("token");
+    console.log("newtoken", Token);
+
+    if (!Token) {
+      alert("User not authenticated");
+      return;
+    }
+
+    axios
+      .post(
+        "http://localhost:4000/Api/Users/addtocart",
+        { itemId },
+        {
+          headers: {
+            Accept: "application/json",
+            Authorization: `Bearer ${Token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((res) => {
+        console.log("Response:", res);
+
+        setCartItems((prev) => {
+          const updatedCart = { ...prev, [itemId]: (prev[itemId] || 0) + 1 };
+          localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+          return updatedCart;
+        });
+
+        alert("Successfully added to cart");
+      })
+      .catch((err) => {
+        console.error("Error adding to cart:", err);
+        alert("Failed to add item to cart.");
+      });
   };
 
   const removefromcart = (item_Id) => {
