@@ -70,10 +70,11 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="nav-login-cart">
-        {localStorage.getItem("token") ? (
+        {localStorage.getItem("Token") ? (
           <button
             onClick={() => {
-              localStorage.removeItem("token");
+              localStorage.removeItem("Token");
+
               window.location.replace("/");
             }}
           >

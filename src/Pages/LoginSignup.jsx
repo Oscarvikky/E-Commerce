@@ -24,7 +24,7 @@ const LoginSignup = () => {
       const responsedata = await response.json();
       console.log("rawdata", responsedata);
 
-      if ((responsedata.status = "success")) {
+      if (responsedata.status === "success") {
         console.log("response", responsedata);
         alert(responsedata.message);
         localStorage.setItem("Token", responsedata.generatetoken);

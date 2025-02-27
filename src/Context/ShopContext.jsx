@@ -63,6 +63,27 @@ const ShopContextProvider = (props) => {
       const fetchData = res.data.product;
       setProduct(fetchData);
     });
+
+    if (localStorage.getItem("Token")) {
+      console.log("ytoken", localStorage.getItem("Token"));
+
+      axios
+        .post(
+          "http://localhost:4000/Api/Users/getuser",
+          {}, // Empty object as POST body (since no data is being sent)
+          {
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage.getItem("Token")}`,
+            },
+          }
+        )
+        .then((res) => setCartItems(res.data)) // Axios automatically parses JSON
+        .catch((error) => console.error("Error fetching user data:", error));
+    } else {
+      setCartItems([]);
+    }
   }, []);
 
   const getDefaultCart = (products) => {
@@ -83,7 +104,7 @@ const ShopContextProvider = (props) => {
     if (product.length > 0 && Object.keys(cartItems).length === 0) {
       setCartItems(getDefaultCart(product));
     }
-  }, [product]);
+  }, []);
 
   // const addToCart = (itemId) => {
   //   setCartItems((prev) => {
