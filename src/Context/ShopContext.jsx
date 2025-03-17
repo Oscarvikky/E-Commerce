@@ -59,17 +59,19 @@ const ShopContextProvider = (props) => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/Api/Products/fetchProduct").then((res) => {
-      const fetchData = res.data.product;
-      setProduct(fetchData);
-    });
+    axios
+      .get("https://oscarvikky.vercel.app/Api/Products/fetchProduct")
+      .then((res) => {
+        const fetchData = res.data.product;
+        setProduct(fetchData);
+      });
 
     if (localStorage.getItem("Token")) {
       console.log("ytoken", localStorage.getItem("Token"));
 
       axios
         .post(
-          "http://localhost:4000/Api/Users/getuser",
+          "https://oscarvikky.vercel.app/Api/Users/getuser",
           {}, // Empty object as POST body (since no data is being sent)
           {
             headers: {
@@ -148,7 +150,7 @@ const ShopContextProvider = (props) => {
 
     axios
       .post(
-        "http://localhost:4000/Api/Users/addtocart",
+        "https://oscarvikky.vercel.app/Api/Users/addtocart",
         { itemId },
         {
           headers: {

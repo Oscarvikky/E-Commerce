@@ -14,13 +14,16 @@ const LoginSignup = () => {
   };
   const login = async () => {
     try {
-      const response = await fetch("http://localhost:4000/Api/Users/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://oscarvikky.vercel.app/Api/Users/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const responsedata = await response.json();
       console.log("rawdata", responsedata);
 
@@ -83,13 +86,16 @@ const LoginSignup = () => {
 
   const signup = async () => {
     try {
-      const response = await fetch("http://localhost:4000/Api/Users/sign-up", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://oscarvikky.vercel.app/Api/Users/sign-up",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const responsedata = await response.json();
       console.log(responsedata);
 

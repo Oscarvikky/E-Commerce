@@ -8,7 +8,7 @@ const NewCollections = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/Api/Products/fetchProduct")
+      .get("https://oscarvikky.vercel.app/Api/Products/fetchProduct")
       .then((res) => {
         const fetchdata = res.data.product || [];
         setproduct(fetchdata);

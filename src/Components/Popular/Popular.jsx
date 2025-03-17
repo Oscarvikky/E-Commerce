@@ -6,11 +6,13 @@ import "./Popular.css";
 const Popular = () => {
   const [product, setproduct] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:4000/Api/Products/fetchProduct").then((res) => {
-      const fetchdata = res.data.product;
-      setproduct(fetchdata);
-      // console.log(product);
-    });
+    axios
+      .get("https://oscarvikky.vercel.app/Api/products/popularinwomen")
+      .then((res) => {
+        const fetchdata = res.data.product;
+        setproduct(fetchdata);
+        // console.log(product);
+      });
   }, []);
 
   return (
