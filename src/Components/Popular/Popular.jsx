@@ -9,7 +9,9 @@ const Popular = () => {
     axios
       .get("https://oscarvikky.vercel.app/Api/products/popularinwomen")
       .then((res) => {
-        const fetchdata = res.data.product;
+        // console.log("res", res.data);
+
+        const fetchdata = res.data;
         setproduct(fetchdata);
         // console.log(product);
       });

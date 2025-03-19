@@ -25,10 +25,10 @@ const LoginSignup = () => {
         }
       );
       const responsedata = await response.json();
-      console.log("rawdata", responsedata);
+      // console.log("rawdata", responsedata);
 
       if (responsedata.status === "success") {
-        console.log("response", responsedata);
+        // console.log("response", responsedata);
         alert(responsedata.message);
         localStorage.setItem("Token", responsedata.generatetoken);
 
@@ -97,7 +97,7 @@ const LoginSignup = () => {
         }
       );
       const responsedata = await response.json();
-      console.log(responsedata);
+      // console.log(responsedata);
 
       if (responsedata.success) {
         alert(responsedata.message);

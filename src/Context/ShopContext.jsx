@@ -67,7 +67,7 @@ const ShopContextProvider = (props) => {
       });
 
     if (localStorage.getItem("Token")) {
-      console.log("ytoken", localStorage.getItem("Token"));
+      // console.log("ytoken", localStorage.getItem("Token"));
 
       axios
         .post(
@@ -141,7 +141,7 @@ const ShopContextProvider = (props) => {
 
   const addToCart = (itemId) => {
     let Token = localStorage.getItem("Token") || localStorage.getItem("token");
-    console.log("newtoken", Token);
+    // console.log("newtoken", Token);
 
     if (!Token) {
       alert("User not authenticated");
@@ -161,7 +161,7 @@ const ShopContextProvider = (props) => {
         }
       )
       .then((res) => {
-        console.log("Response:", res);
+        // console.log("Response:", res);
 
         setCartItems((prev) => {
           const updatedCart = { ...prev, [itemId]: (prev[itemId] || 0) + 1 };
@@ -223,7 +223,7 @@ const ShopContextProvider = (props) => {
   };
 
   useEffect(() => {
-    console.log("Updated cart items:", cartItems);
+    // console.log("Updated cart items:", cartItems);
   }, [cartItems]);
 
   return (
