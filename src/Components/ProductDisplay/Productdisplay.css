@@ -221,7 +221,8 @@
     font-weight: 500;
   }
   .productdisplay-main-img {
-    width: 350px;
+    width: 280px;
+    height: 390px;
   }
   .productdisplay-right-sizes div {
     padding: 12px 18px;
